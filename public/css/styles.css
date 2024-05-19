@@ -1,0 +1,180 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Estilos para el tema oscuro */
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-theme header {
+    background-color: #000;
+    color: white;
+    border-bottom: 2px solid #0088ff;
+}
+
+body.dark-theme .header-right ul li a {
+    color: white;
+}
+
+body.dark-theme .header-right ul li a:hover {
+    color: #0088ff;
+}
+
+/* Estilos para el tema claro */
+body.light-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+body.light-theme header {
+    background-color: #f1f1f1;
+    color: black;
+    border-bottom: 2px solid #0088ff;
+}
+
+body.light-theme .header-right ul li a {
+    color: black;
+}
+
+body.light-theme .header-right ul li a:hover {
+    color: #0088ff;
+}
+
+/* Estilos para el encabezado */
+header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.5s, color 0.5s;
+    position: relative; /* Aseguramos que los elementos puedan posicionarse correctamente */
+}
+
+/* Estilos para la sección izquierda del encabezado */
+.header-left {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem; /* Ajusta el margen derecho para separar del botón de cambio de tema */
+}
+
+.header-left img.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Estilos para la sección derecha del encabezado */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1; /* Espacio uniforme entre los elementos */
+    margin-left: auto; /* Elimina cualquier margen a la izquierda */
+    margin-right: auto;
+}
+
+/* Estilos para la sección derecha del encabezado */
+.header-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 3rem;
+}
+
+.header-right ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+    margin: 0;
+}
+
+/* Estilos para el botón de cambio de tema */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 20%;  /* Hacemos el botón redondeado */
+    background-color: #fff;  /* Fondo blanco por defecto (tema oscuro) */
+    transition: background-color 0.3s;
+    margin-right: 1rem; /* Espacio entre el botón y el primer elemento de navegación */
+}
+
+/* Estilos para el botón de cambio de tema en el tema claro */
+body.light-theme .theme-toggle {
+    background-color: #000;  /* Fondo negro para el tema claro */
+}
+
+/* Efecto hover para el botón de cambio de tema en el tema oscuro */
+body.dark-theme .theme-toggle:hover {
+    background-color: #ccc;  /* Cambio de color al pasar el cursor en tema oscuro */
+}
+
+/* Efecto hover para el botón de cambio de tema en el tema claro */
+body.light-theme .theme-toggle:hover {
+    background-color: #555;  /* Cambio de color al pasar el cursor en tema claro */
+}
+
+/* Estilos para el icono dentro del botón */
+#theme-icon {
+    font-size: 1.5rem;
+}
+
+/* Estilos para la sección Home */
+.home-section {
+    position: relative;
+    height: calc(100vh - 80px);  /* Ocupa toda la pantalla menos el header */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.home-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.25);  /* Oscurece el fondo para mejorar la legibilidad del texto */
+    z-index: 1;
+}
+
+.home-content {
+    position: relative;
+    z-index: 2;
+}
+
+.home-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.home-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
