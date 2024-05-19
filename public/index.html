@@ -28,7 +28,7 @@
     <main>
         <section id="home" class="home-section">
             <div class="home-content">
-                <img src="images/foto_Gaspar1.jpg" alt="Imagen de bienvenida" class="home-image">
+                <img id="profile-image" src="images/foto_perfil_blanco.png" alt="Imagen de bienvenida" class="home-image">
                 <h2 class="home-text">¡Bienvenido a mi portafolio!</h2>
             </div>
         </section>
@@ -46,21 +46,21 @@
             <h2>Proyectos</h2>
             <div class="carousel">
                 <div class="carousel-item active">
-                    <img src="images/proyecto1.jpg" alt="Proyecto 1">
+                    <img src="images/proyecto1.png" alt="Proyecto 1">
                     <div class="carousel-caption">
                         <h3>Proyecto 1</h3>
                         <p>Descripción del Proyecto 1.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/proyecto2.jpg" alt="Proyecto 2">
+                    <img src="images/proyecto2.png" alt="Proyecto 2">
                     <div class="carousel-caption">
                         <h3>Proyecto 2</h3>
                         <p>Descripción del Proyecto 2.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/proyecto3.jpg" alt="Proyecto 3">
+                    <img src="images/proyecto3.png" alt="Proyecto 3">
                     <div class="carousel-caption">
                         <h3>Proyecto 3</h3>
                         <p>Descripción del Proyecto 3.</p>
@@ -100,9 +100,19 @@
         function updateBackgroundImage() {
             const homeSection = document.querySelector('.home-section');
             if (document.body.classList.contains('dark-theme')) {
-                homeSection.style.backgroundImage = "url('images/fondo_negro.jpg')";
+                homeSection.style.backgroundImage = "url('images/fondo_negro.png')";
             } else {
-                homeSection.style.backgroundImage = "url('images/fondo_blanco.jpg')";
+                homeSection.style.backgroundImage = "url('images/fondo_blanco.png')";
+            }
+        }
+
+        // Función para cambiar la imagen de perfil según el tema
+        function updateProfileImage() {
+            const profileImage = document.getElementById('profile-image');
+            if (document.body.classList.contains('dark-theme')) {
+                profileImage.src = 'images/foto_perfil_negro1.png';
+            } else {
+                profileImage.src = 'images/foto_perfil_blanco1.png';
             }
         }
     
@@ -115,20 +125,20 @@
             document.body.classList.toggle('light-theme');
     
             if (document.body.classList.contains('dark-theme')) {
-                icon.textContent = '🌙'; // Icono de luna
+                icon.textContent = '☀️'; // Icono de luna
             } else {
-                icon.textContent = '☀️'; // Icono de sol
+                icon.textContent = '🌙'; // Icono de sol
             }
     
             updateBackgroundImage();
+            updateProfileImage();
         });
     
         // Inicializar el tema por defecto y el texto del botón según el tema actual
         document.body.classList.add('dark-theme'); // Tema oscuro por defecto
-        icon.textContent = '🌙'; // Icono de luna por defecto
+        icon.textContent = '☀️'; // Icono de luna por defecto
         updateBackgroundImage();
+        updateProfileImage();
     </script>
-    
-    
 </body>
 </html>
