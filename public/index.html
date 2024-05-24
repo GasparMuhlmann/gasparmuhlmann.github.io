@@ -20,27 +20,113 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="theme-toggle" id="theme-toggle">
-            <span id="theme-icon">🌙</span> <!-- Icono de luna por defecto -->
-        </div>
-    </header>    
-
+    </header>
+    
     <main>
+    <!-- Contenedor del botón de cambio de tema -->
+    <div class="theme-toggle-container">
+        <label for="theme" class="theme">
+            <span class="theme__toggle-wrap">
+                <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+                <span class="theme__icon">
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                    <span class="theme__icon-part"></span>
+                </span>
+            </span>
+        </label>
+    </div>
+
+
         <section id="home" class="home-section">
             <div class="home-content">
                 <img id="profile-image" src="images/foto_perfil_blanco.png" alt="Imagen de bienvenida" class="home-image">
-                <h2 class="home-text">¡Bienvenido a mi portafolio!</h2>
+                <h2 class="home-text"><i>"No one gets better results than what their relationships allow them to do"</i></h2>
             </div>
         </section>
 
-        <section id="about">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Habilidad 1</li>
-                <li>Habilidad 2</li>
-                <li>Habilidad 3</li>
-            </ul>
+        <section id="about" class="section is-medium is-primary has-text-centered is-long">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-three-fifths">
+                        <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">Hi, I’m Gaspar. Nice to meet you.</h1>
+                        <h2 class="subtitle is-size-5-desktop has-text-weight-normal">Since beginning my journey as a freelance designer, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my skills.</h2>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <section id="skills" class="section skills has-text-centered">
+            <div class="container is-narrow">
+                <div class="box">
+                    <div class="content">
+                        <div class="columns is-centered">
+                            <div class="column">
+                                <span class="icon-stack icon-2x">
+                                    <img src="images/designer.png" alt="Designer Image" class="icon-image">
+                                </span>
+                                <h1 class="title is-size-4 is-spaced">Designer</h1>
+                                <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+                                <p class="list-title has-text-primary has-text-weight-normal">Things I enjoy designing:</p>
+                                <p>UX, UI, Web, Apps, Logos</p>
+                                <p class="list-title has-text-primary has-text-weight-normal">Design Tools:</p>
+                                <ul>
+                                    <li>Affinity Designer</li>
+                                    <li>Figma</li>
+                                    <li>Pen & Paper</li>
+                                    <li>Sketch</li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <span class="icon-stack icon-2x">
+                                    <img src="images/erp.png" alt="Frontend Developer Image" class="icon-image">
+                                </span>
+                                <h1 class="title is-size-4 is-spaced">Odoo Enterprise - Version 16</h1>
+                                <p>Disfruto protagonizar la transición de implementar un ERP en las empresas. Desde capacitaciones hasta desarrollos y modelados.</p>
+                                <p class="list-title has-text-primary has-text-weight-normal">Lenguajes que hablo:</p>
+                                <p>Python, SQL Server, Google Sheets, Google Cloud</p>
+                                <p class="list-title has-text-primary has-text-weight-normal">Módulos trabajados en profundidad:</p>
+                                <ul>
+                                    <li>Contabilidad</li>
+                                    <li>Compras</li>
+                                    <li>Inventario</li>
+                                    <li>Ventas</li>
+                                    <li>POS</li>
+                                    <li>Mercado Libre</li>
+                                    <li>Contactos</li>
+
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <span class="icon-stack icon-2x">
+                                    <img src="images/rpa.png" alt="Mentor Image" class="icon-image">
+                                </span>
+                                <h1 class="title is-size-4 is-spaced">Mentor</h1>
+                                <p>I genuinely care about people, and enjoy helping them work on their craft.</p>
+                                <p class="list-title has-text-primary has-text-weight-normal">Experiences I draw from:</p>
+                                <p>UX/UI, Product design, Freelancing</p>
+                                <p class="list-title has-text-primary has-text-weight-normal">Mentor Stats:</p>
+                                <ul>
+                                    <li>9+ years experience</li>
+                                    <li>30+ short courses</li>
+                                    <li>65+ bootcamps</li>
+                                    <li>250+ students</li>
+                                    <li>2,500+ mentor sessions</li>
+                                    <li>60+ group critiques</li>
+                                    <li>18,000+ bits of feedback</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>            
 
         <section id="projects">
             <h2>Proyectos</h2>
@@ -67,7 +153,7 @@
                     </div>
                 </div>
             </div>
-        </section>        
+        </section>
 
         <section id="contact">
             <h2>Contacto</h2>
@@ -82,7 +168,7 @@
                 <textarea id="message" name="message" required></textarea>
                 
                 <button type="submit">Enviar</button>
-            </form>   
+            </form>
         </section>
     </main>
 
@@ -91,54 +177,37 @@
     </footer>
 
     <script>
-        document.querySelector('form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Mensaje enviado con éxito!');
-        });
-    
-        // Función para cambiar la imagen de fondo según el tema
-        function updateBackgroundImage() {
-            const homeSection = document.querySelector('.home-section');
-            if (document.body.classList.contains('dark-theme')) {
-                homeSection.style.backgroundImage = "url('images/fondo_negro.png')";
-            } else {
-                homeSection.style.backgroundImage = "url('images/fondo_blanco.png')";
-            }
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme');
+            const themeToggleContainer = document.querySelector('.theme-toggle-container');
 
-        // Función para cambiar la imagen de perfil según el tema
-        function updateProfileImage() {
+            themeToggleContainer.addEventListener('click', (event) => {
+                if (event.target === themeToggle) {
+                    document.body.classList.toggle('dark-theme');
+                    document.body.classList.toggle('light-theme');
+                    updateTheme();
+                }
+            });
+
+            if (document.body.classList.contains('dark-theme')) {
+                themeToggle.checked = true;
+            } else {
+                themeToggle.checked = false;
+            }
+        });
+
+        function updateTheme() {
+            const homeSection = document.querySelector('.home-section');
             const profileImage = document.getElementById('profile-image');
             if (document.body.classList.contains('dark-theme')) {
+                homeSection.style.backgroundImage = "url('images/fondo_home_negro.png')";
                 profileImage.src = 'images/foto_perfil_negro1.png';
             } else {
+                homeSection.style.backgroundImage = "url('images/fondo_home_blanco.png')";
                 profileImage.src = 'images/foto_perfil_blanco1.png';
             }
         }
-    
-        // Cambio de tema claro/oscuro
-        const button = document.getElementById('theme-toggle');
-        const icon = document.getElementById('theme-icon');
-    
-        button.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
-            document.body.classList.toggle('light-theme');
-    
-            if (document.body.classList.contains('dark-theme')) {
-                icon.textContent = '☀️'; // Icono de luna
-            } else {
-                icon.textContent = '🌙'; // Icono de sol
-            }
-    
-            updateBackgroundImage();
-            updateProfileImage();
-        });
-    
-        // Inicializar el tema por defecto y el texto del botón según el tema actual
-        document.body.classList.add('dark-theme'); // Tema oscuro por defecto
-        icon.textContent = '☀️'; // Icono de luna por defecto
-        updateBackgroundImage();
-        updateProfileImage();
+        updateTheme();
     </script>
 </body>
 </html>
