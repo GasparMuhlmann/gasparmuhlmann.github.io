@@ -437,7 +437,7 @@ header {
 
 .box {
     background-color: white;
-    padding: 3rem;
+    padding: 2rem;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(10, 10, 10, 0.1);
     border-radius: 12px;
 }
@@ -485,7 +485,7 @@ header {
 }
 
 .list-title {
-    margin-top: 1rem;
+    margin-top: 3.5rem;
     margin-bottom: 0.5rem;
 }
 
