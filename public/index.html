@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="dark-theme">
-    <header>
+    <header class="fixed-header">
         <div class="header-left">
             <img src="images/logo.png" alt="Gaspar Muhlmann" class="profile-pic">
             <h1>Gaspar Muhlmann</h1>
@@ -52,12 +52,17 @@
             <div class="container">
                 <div class="columns is-centered">
                     <div class="column is-three-fifths">
-                        <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">Hi, I’m Gaspar. Nice to meet you.</h1>
-                        <h2 class="subtitle is-size-5-desktop has-text-weight-normal">Since beginning my journey as a freelance designer, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my skills.</h2>
-                    </div>
+                        <div class="about-card">
+                            <div class="about-card-content">
+                                <h1 class="card-title">¡Hola! Soy Gaspar, gusto que estes acá.</h1>
+                                <h2 class="card-para">Califico como una persona independiente y segura, con habilidades de comunicación que uso para llegar a los demás. Me adapto bien al trabajo en equipo y disfruto liderar proyectos, siendo diplomático y comprensivo con las necesidades de los demás. Mi enfoque es tranquilo y persistente, planifico a futuro y manejo bien situaciones ambiguas. Me motiva enfrentar retos y recibir reconocimiento.</h2>
+                                <h2 class="card-para"><i>Si queres mejorar este u otro mundo, estaré encantado de escuchar sobre ti.</i></h2>
+                            </div>
+                        </div>
+                    </div>        
                 </div>
             </div>
-        </section>
+        </section>        
 
         <section id="skills" class="section skills has-text-centered">
             <div class="container is-narrow">
@@ -192,6 +197,7 @@
         function updateTheme() {
             const homeSection = document.querySelector('.home-section');
             const profileImage = document.getElementById('profile-image');
+
             if (document.body.classList.contains('dark-theme')) {
                 homeSection.style.backgroundImage = "url('images/fondo_home_negro.png')";
                 profileImage.src = 'images/foto_perfil_negro1.png';

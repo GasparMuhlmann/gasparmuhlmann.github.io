@@ -20,7 +20,7 @@ body.dark-theme .dark-theme-text-black {
 body.dark-theme header {
     background-color: #000;
     color: white;
-    border-bottom: 2px solid #0088ff;
+    border-bottom: 2px solid #3e838c;
 }
 
 body.dark-theme .header-right ul li a {
@@ -28,11 +28,11 @@ body.dark-theme .header-right ul li a {
 }
 
 body.dark-theme .header-right ul li a:hover {
-    color: #0088ff;
+    color: #000;
 }
 
 body.dark-theme .section {
-    background-color: #0088ff;
+    background-color: #000;
     color: #fff;
 }
 
@@ -45,7 +45,7 @@ body.light-theme {
 body.light-theme header {
     background-color: #f1f1f1;
     color: black;
-    border-bottom: 2px solid #0088ff;
+    border-bottom: 2px solid #3e838c;
 }
 
 body.light-theme .header-right ul li a {
@@ -53,12 +53,11 @@ body.light-theme .header-right ul li a {
 }
 
 body.light-theme .header-right ul li a:hover {
-    color: #0088ff;
+    color: #fff;
 }
 
 body.light-theme .section {
-    background-color: #0088ff;
-    color: #000;
+    background-color: #fff;
 }
 
 /* Header Styles */
@@ -69,6 +68,8 @@ header {
     align-items: center;
     transition: background-color 0.5s, color 0.5s;
     position: relative;
+    z-index: 1000; /* Asegura que el header esté por encima del contenido */
+
 }
 
 /* Header Left Section */
@@ -384,7 +385,7 @@ header {
 }
 
 .is-primary {
-    background-color: #0088ff;
+    background-color: #0999ff;
     color: white;
 }
 
@@ -393,7 +394,7 @@ header {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -411,24 +412,97 @@ header {
     flex: 0 0 60%;
 }
 
-.title {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    font-weight: 600;
+/* About Card Styles */
+.about-card {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #195e63 0%, #063940 50%, #195e63 100%);
+    border-radius: 8px;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-.subtitle {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-size: 1.25rem;
-    font-weight: normal;
-    line-height: 1.6;
+.about-card-content {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+
+.about-card-content .card-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: inherit;
+}
+
+.about-card-content .card-para {
+    color: inherit;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center; /* Ensure text is centered */
+}
+
+/* Adjusting the card's behavior on hover */
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-card:before,
+.about-card:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+    z-index: 1;
+}
+
+.about-card:before {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.about-card:after {
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.about-card:hover:before,
+.about-card:hover:after {
+    transform: translateX(0);
+}
+
+  
 /* Skills Section Styles */
 .skills {
     background-image: url('../images/fondo_tabla_negro.png');
     background-size: cover;
     padding: 4rem 1.5rem;
+}
+
+body.dark-theme .skills {
+    background-image: url('images/fondo_tabla_negro.png');
+}
+
+body.light-theme .skills {
+    background-image: url('images/fondo_tabla_blanco.png');
 }
 
 .is-narrow {
@@ -467,7 +541,7 @@ header {
 }
 
 .icon-background {
-    background-color: #0088ff; /* Cambia este valor por el color que prefieras */
+    background-color: #195e63; /* Cambia este valor por el color que prefieras */
     border-radius: 50%;
     padding: 0.5rem; 
     display: inline-block; /* Para asegurarte de que el padding se aplique correctamente */
@@ -490,7 +564,7 @@ header {
 }
 
 .has-text-primary {
-    color: #0088ff;
+    color: #195e63;
 }
 
 .has-text-weight-normal {
