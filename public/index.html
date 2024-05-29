@@ -9,7 +9,7 @@
 <body class="dark-theme">
     <header>
         <div class="header-left">
-            <img src="images/logo.png" alt="Gaspar Muhlmann" class="profile-pic">
+            <img src="images/logo.svg" alt="Gaspar Muhlmann" class="profile-pic">
             <h1>Gaspar Muhlmann</h1>
         </div>
         <nav class="header-right">
@@ -20,33 +20,31 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <!-- Contenedor del botón de cambio de tema -->
+        <div class="theme-toggle-container">
+            <label for="theme" class="theme">
+                <span class="theme__toggle-wrap">
+                    <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+                    <span class="theme__icon">
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                        <span class="theme__icon-part"></span>
+                    </span>
+                </span>
+            </label>
+        </div>
     </header>
     
     <main>
-    <!-- Contenedor del botón de cambio de tema -->
-    <div class="theme-toggle-container">
-        <label for="theme" class="theme">
-            <span class="theme__toggle-wrap">
-                <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
-                <span class="theme__icon">
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                    <span class="theme__icon-part"></span>
-                </span>
-            </span>
-        </label>
-    </div>
-
-
         <section id="home" class="home-section">
             <div class="home-content">
-                <img id="profile-image" src="images/foto_perfil_blanco.png" alt="Imagen de bienvenida" class="home-image">
+                <img id="profile-image" src="images/foto_perfil_blanco1.svg" alt="Imagen de bienvenida" class="home-image">
                 <h2 class="home-text"><i>"No one gets better results than what their relationships allow them to do"</i></h2>
             </div>
         </section>
@@ -66,94 +64,90 @@
             <div class="container is-narrow">
                 <div class="box">
                     <div class="content">
-                        <div class="columns is-centered">
-                            <div class="column">
-                                <span class="icon-stack icon-2x">
-                                    <img src="images/designer.png" alt="Designer Image" class="icon-image">
-                                </span>
-                                <h1 class="title is-size-4 is-spaced">Designer</h1>
-                                <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
-                                <p class="list-title has-text-primary has-text-weight-normal">Things I enjoy designing:</p>
-                                <p>UX, UI, Web, Apps, Logos</p>
-                                <p class="list-title has-text-primary has-text-weight-normal">Design Tools:</p>
-                                <ul>
-                                    <li>Affinity Designer</li>
-                                    <li>Figma</li>
-                                    <li>Pen & Paper</li>
-                                    <li>Sketch</li>
-                                </ul>
+                        <div class="columns is-multiline is-centered">
+                            <div class="column is-one-third">
+                                <div class="skill-container dark-theme-text-black">
+                                    <span class="icon-stack icon-2x icon-background">
+                                        <img src="images/programacion.svg" alt="Programación" class="icon-image">
+                                    </span>
+                                    <h1 class="title is-size-4 is-spaced">Programación</h1>
+                                    <p>Entusiasta de la mejora continua y la resolución de problemas</p>
+                                    <p class="list-title has-text-primary has-text-weight-normal">Cosas que disfruto hacer:</p>
+                                    <p>Relevamientos, modelados, testeos, programación, manuales, querys, conexiones API, scripts, etc.</p>
+                                    <p class="list-title has-text-primary has-text-weight-normal">Herramientas de desarrollo:</p>
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>JavaScript</li>
+                                        <li>Git</li>
+                                        <li>SQL Server</li>
+                                        <li>Power BI</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="column">
-                                <span class="icon-stack icon-2x">
-                                    <img src="images/erp.png" alt="Frontend Developer Image" class="icon-image">
-                                </span>
-                                <h1 class="title is-size-4 is-spaced">Odoo Enterprise - Version 16</h1>
-                                <p>Disfruto protagonizar la transición de implementar un ERP en las empresas. Desde capacitaciones hasta desarrollos y modelados.</p>
-                                <p class="list-title has-text-primary has-text-weight-normal">Lenguajes que hablo:</p>
-                                <p>Python, SQL Server, Google Sheets, Google Cloud</p>
-                                <p class="list-title has-text-primary has-text-weight-normal">Módulos trabajados en profundidad:</p>
-                                <ul>
-                                    <li>Contabilidad</li>
-                                    <li>Compras</li>
-                                    <li>Inventario</li>
-                                    <li>Ventas</li>
-                                    <li>POS</li>
-                                    <li>Mercado Libre</li>
-                                    <li>Contactos</li>
-
-                                </ul>
+                            <div class="column is-one-third">
+                                <div class="skill-container dark-theme-text-black">
+                                    <span class="icon-stack icon-2x icon-background">
+                                        <img src="images/erp.svg" alt="ERP" class="icon-image">
+                                    </span>
+                                    <h1 class="title is-size-4 is-spaced">Odoo Enterprise</h1>
+                                    <p>Disfruto protagonizar la transición de implementar un sistema en empresas. Desde capacitaciones hasta desarrollos y modelados.</p>
+                                    <p class="list-title has-text-primary has-text-weight-normal">Módulos trabajados en profundidad:</p>
+                                    <ul>
+                                        <li>Contabilidad</li>
+                                        <li>Compras</li>
+                                        <li>Inventario</li>
+                                        <li>Ventas</li>
+                                        <li>POS</li>
+                                        <li>Mercado Libre</li>
+                                        <li>Contactos</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="column">
-                                <span class="icon-stack icon-2x">
-                                    <img src="images/rpa.png" alt="Mentor Image" class="icon-image">
-                                </span>
-                                <h1 class="title is-size-4 is-spaced">Mentor</h1>
-                                <p>I genuinely care about people, and enjoy helping them work on their craft.</p>
-                                <p class="list-title has-text-primary has-text-weight-normal">Experiences I draw from:</p>
-                                <p>UX/UI, Product design, Freelancing</p>
-                                <p class="list-title has-text-primary has-text-weight-normal">Mentor Stats:</p>
-                                <ul>
-                                    <li>9+ years experience</li>
-                                    <li>30+ short courses</li>
-                                    <li>65+ bootcamps</li>
-                                    <li>250+ students</li>
-                                    <li>2,500+ mentor sessions</li>
-                                    <li>60+ group critiques</li>
-                                    <li>18,000+ bits of feedback</li>
-                                </ul>
+                            <div class="column is-one-third">
+                                <div class="skill-container dark-theme-text-black">
+                                    <span class="icon-stack icon-2x icon-background">
+                                        <img src="images/rpa.svg" alt="RPA" class="icon-image">
+                                    </span>
+                                    <h1 class="title is-size-4 is-spaced">RPA</h1>
+                                    <p>Genuinamente me interesa la gente, y disfruto ayudar a que su tiempo sea más valioso.</p>
+                                    <p class="list-title has-text-primary has-text-weight-normal">Lenguajes que hablo:</p>
+                                    <p>Python, SQL Server, JavaScript, HTML, CSS, Git</p>
+                                    <p class="list-title has-text-primary has-text-weight-normal">Herramientas que uso:</p>
+                                    <ul>
+                                        <li>Ui Path</li>
+                                        <li>Zapier</li>
+                                        <li>Google Cloud</li>
+                                        <li>Google Apps Script</li>
+                                        <li>Google Sheet</li>
+                                        <li>Asana</li>
+                                        <li>Miro</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>            
+        </section>        
 
         <section id="projects">
             <h2>Proyectos</h2>
-            <div class="carousel">
-                <div class="carousel-item active">
-                    <img src="images/proyecto1.png" alt="Proyecto 1">
-                    <div class="carousel-caption">
-                        <h3>Proyecto 1</h3>
-                        <p>Descripción del Proyecto 1.</p>
-                    </div>
+            <div class="projects-container">
+                <div class="card">
+                    <p class="heading">Automatización WIX - Odoo</p>
                 </div>
-                <div class="carousel-item">
-                    <img src="images/proyecto2.png" alt="Proyecto 2">
-                    <div class="carousel-caption">
-                        <h3>Proyecto 2</h3>
-                        <p>Descripción del Proyecto 2.</p>
-                    </div>
+                <div class="card">
+                    <p class="heading">Animall Forrajería</p>
                 </div>
-                <div class="carousel-item">
-                    <img src="images/proyecto3.png" alt="Proyecto 3">
-                    <div class="carousel-caption">
-                        <h3>Proyecto 3</h3>
-                        <p>Descripción del Proyecto 3.</p>
-                    </div>
+                <div class="card">
+                    <p class="heading">Dashboard</p>
+                </div>
+                <div class="card">
+                    <p class="heading">Python</p>
                 </div>
             </div>
         </section>
+        
 
         <section id="contact">
             <h2>Contacto</h2>
@@ -200,11 +194,11 @@
             const homeSection = document.querySelector('.home-section');
             const profileImage = document.getElementById('profile-image');
             if (document.body.classList.contains('dark-theme')) {
-                homeSection.style.backgroundImage = "url('images/fondo_home_negro.png')";
-                profileImage.src = 'images/foto_perfil_negro1.png';
+                homeSection.style.backgroundImage = "url('images/fondo_home_negro.svg')";
+                profileImage.src = 'images/foto_perfil_negro1.svg';
             } else {
-                homeSection.style.backgroundImage = "url('images/fondo_home_blanco.png')";
-                profileImage.src = 'images/foto_perfil_blanco1.png';
+                homeSection.style.backgroundImage = "url('images/fondo_home_blanco.svg')";
+                profileImage.src = 'images/foto_perfil_blanco1.svg';
             }
         }
         updateTheme();
