@@ -1,0 +1,70 @@
+/* Dark Theme Styles */
+body.dark-theme {
+    color: #fff;
+}
+
+body.dark-theme .dark-theme-text-black {
+    color: #000;
+}
+
+body.dark-theme header {
+    background-color: #000;
+    color: white;
+}
+
+body.dark-theme .header-right ul li a {
+    color: white;
+}
+
+body.dark-theme .header-right ul li a:hover {
+    color: #1E90FF;
+}
+
+body.dark-theme .section {
+    background: none;
+    color: #fff;
+}
+
+body.dark-theme .contact-form {
+    background: #333;
+}
+
+body.dark-theme .card {
+    background-color: #333;
+}
+
+/* Light Theme Styles */
+body.light-theme {
+    color: #000;
+}
+
+body.light-theme header {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+body.light-theme .header-right ul li a {
+    color: black;
+}
+
+body.light-theme .header-right ul li a:hover {
+    color: #1E90FF;
+}
+
+body.light-theme .section {
+    background: none;
+    color: #000;
+}
+
+body.light-theme .about-card {
+    background-color: #fff;
+    color: #000;
+}
+
+body.light-theme .contact-form {
+    background: #e0dfdf;
+}
+
+body.light-theme .card {
+    background-color: #e0dfdf;
+}

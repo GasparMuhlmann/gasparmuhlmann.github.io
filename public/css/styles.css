@@ -6,78 +6,7 @@ body {
     box-sizing: border-box;
     transition: background 0.5s, color 0.5s;
     background-size: cover;
-    background-attachment: fixed; /* Fix the background position */
-}
-
-/* Dark Theme Styles */
-body.dark-theme {
-    color: #fff;
-}
-
-body.dark-theme .dark-theme-text-black {
-    color: #000;
-}
-
-body.dark-theme header {
-    background-color: #000;
-    color: white;
-}
-
-body.dark-theme .header-right ul li a {
-    color: white;
-}
-
-body.dark-theme .header-right ul li a:hover {
-    color: #1E90FF;
-}
-
-body.dark-theme .section {
-    background: none; /* No additional background color, let the body's background show */
-    color: #fff;
-}
-
-body.dark-theme .contact-form {
-    background: #333;
-}
-
-body.dark-theme .card {
-    background-color: #333;
-}
-
-/* Light Theme Styles */
-body.light-theme {
-    color: #000;
-}
-
-body.light-theme header {
-    background-color: #f1f1f1;
-    color: black;
-}
-
-body.light-theme .header-right ul li a {
-    color: black;
-}
-
-body.light-theme .header-right ul li a:hover {
-    color: #1E90FF;
-}
-
-body.light-theme .section {
-    background: none; /* No additional background color, let the body's background show */
-    color: #000;
-}
-
-body.light-theme .about-card {
-    background-color: #fff;
-    color: #000;
-}
-
-body.light-theme .contact-form {
-    background: #e0dfdf;
-}
-
-body.light-theme .card {
-    background-color: #e0dfdf;
+    background-attachment: fixed;
 }
 
 /* Header Styles */
@@ -95,7 +24,6 @@ header {
     box-sizing: border-box;
 }
 
-/* Header Left Section */
 .header-left {
     display: flex;
     align-items: center;
@@ -113,7 +41,6 @@ header {
     font-size: 1.5rem;
 }
 
-/* Header Right Section */
 .header-right {
     display: flex;
     align-items: center;
@@ -142,19 +69,7 @@ header {
     transition: color 0.5s;
 }
 
-/* Theme Toggle Button Styles */
-.theme-toggle-container {
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: all;
-}
-
+/* Tema Toggle Button Styles */
 .theme {
     display: flex;
     align-items: center;
@@ -359,6 +274,7 @@ header {
     }
 }
 
+
 /* Home Section Styles */
 .home-section {
     position: relative;
@@ -393,7 +309,7 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1.5rem; /* Añade espacio entre los elementos */
+    gap: 1.5rem;
 }
 
 .home-image {
@@ -413,15 +329,6 @@ header {
     padding: 4rem 1.5rem;
 }
 
-.is-primary {
-    background-color: #0999ff;
-    color: white;
-}
-
-.has-text-centered {
-    text-align: center;
-}
-
 .container {
     max-width: 1600px;
     margin: 0 auto;
@@ -437,15 +344,10 @@ header {
     max-width: 100%;
 }
 
-.is-three-fifths {
-    flex: 0 0 60%;
-}
-
 /* About Card Styles */
 .about-card {
     width: 100%;
     max-width: 1200px;
-    height: auto;
     margin: auto;
     background-color: #000;
     border-radius: 8px;
@@ -470,19 +372,18 @@ header {
     text-align: center;
 }
 
-.about-card-content .card-title {
+.card-title {
     font-size: 28px;
     font-weight: 700;
 }
 
-.about-card-content .card-para {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.card-para {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
     font-size: 18px;
     line-height: 1.5;
-    text-align: center; /* Ensure text is centered */
+    text-align: center;
 }
 
-/* Adjusting the card's behavior on hover */
 .about-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
@@ -558,12 +459,8 @@ header {
 .icon-background {
     background-color: #025959;
     border-radius: 50%;
-    padding: 0.5rem; 
-    display: inline-block; 
-}
-
-body.light-theme .icon-background {
-    background-color: #0583F2;
+    padding: 0.5rem;
+    display: inline-block;
 }
 
 .skill-container {
@@ -585,10 +482,6 @@ body.light-theme .icon-background {
 .has-text-primary {
     font-size: 1.3rem;
     color: #025959;
-}
-
-body.light-theme .has-text-primary {
-    color: #0583F2;
 }
 
 .has-text-weight-normal {
@@ -622,16 +515,7 @@ ul li {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem; /* Espacio entre las tarjetas */
-}
-
-#projects .card {
-    background-color: #333; /* Fondo de las tarjetas en gris oscuro para destacar sobre el negro */
-    color: #fff; /* Color del texto en blanco */
-}
-
-#projects .card .heading {
-    color: #fff; /* Asegura que el texto del heading sea visible */
+    gap: 2rem;
 }
 
 .card {
@@ -645,10 +529,10 @@ ul li {
     gap: 16px;
     border-radius: 12px;
     cursor: pointer;
-    background-color: #333; /* Fondo de las tarjetas en gris oscuro para destacar sobre el negro */
-    color: #fff; /* Color del texto en blanco */
-    border: 2px solid transparent; /* Inicialmente transparente para permitir el efecto de hover */
-    transition: border-color 0.3s ease; /* Transición para el borde */
+    background-color: #333;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
 }
 
 .card::before {
@@ -692,7 +576,7 @@ ul li {
 }
 
 .card:hover {
-    border-color: #e81cff; /* Color del borde al hacer hover */
+    border-color: #e81cff;
 }
 
 .card:hover::after {
@@ -710,7 +594,7 @@ ul li {
 }
 
 .contact-section .container {
-    width: 600px; /* Narrower form */
+    width: 600px;
     margin: 0 auto;
 }
 
@@ -732,8 +616,8 @@ ul li {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px; /* Ensure form width is capped */
-    margin: 0 auto; /* Center the form */
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .form-group {
@@ -746,7 +630,7 @@ ul li {
     margin-bottom: 0.5rem;
     font-weight: bold;
     font-size: 1rem;
-    color: #000; /* Label text color */
+    color: #000;
 }
 
 .contact-form input,
@@ -754,13 +638,13 @@ ul li {
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #f0f4f8; /* Input background color */
+    background-color: #f0f4f8;
     font-size: 1rem;
-    color: #333; /* Input text color */
+    color: #333;
 }
 
 .contact-form textarea {
-    height: 200px; /* Increased height for message textarea */
+    height: 200px;
 }
 
 .contact-form input::placeholder,
@@ -772,8 +656,8 @@ ul li {
     padding: 1rem;
     border: none;
     border-radius: 4px;
-    background-color: #333; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: #333;
+    color: #fff;
     font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -783,24 +667,23 @@ ul li {
     background-color: #555;
 }
 
-/* Adjust styles for dark theme */
 body.dark-theme .contact-section {
-    color: #fff; /* Light text for dark theme */
+    color: #fff;
 }
 
 body.dark-theme .contact-form label {
-    color: #fff; /* Form text color */
+    color: #fff;
 }
 
 body.dark-theme .contact-form {
-    background: #444; /* Form background color */
-    color: #fff; /* Form text color */
+    background: #444;
+    color: #fff;
 }
 
 body.dark-theme .contact-form input,
 body.dark-theme .contact-form textarea {
-    background-color: #b3b3b3; /* Input background color for dark theme */
-    color: #000; /* Input text color for dark theme */
+    background-color: #b3b3b3;
+    color: #000;
 }
 
 body.dark-theme .contact-form input::placeholder,
@@ -809,10 +692,36 @@ body.dark-theme .contact-form textarea::placeholder {
 }
 
 body.dark-theme .submit-button {
-    background-color: #fff; /* Button background color for dark theme */
-    color: #000; /* Button text color for dark theme */
+    background-color: #fff;
+    color: #000;
 }
 
 body.dark-theme .submit-button:hover {
     background-color: #bbb;
 }
+
+/* Footer Styles */
+.footer {
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer .social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer .social-media a img {
+    width: 24px;
+    height: 24px;
+}
+
