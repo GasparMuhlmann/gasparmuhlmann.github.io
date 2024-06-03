@@ -34,7 +34,15 @@ body.dark-theme .card {
 }
 
 /* Light Theme Styles */
+.home-section .home-image.light-theme{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.404);
+}
+
 body.light-theme {
+    color: #000;
+}
+
+body.light-theme .home-text {
     color: #000;
 }
 

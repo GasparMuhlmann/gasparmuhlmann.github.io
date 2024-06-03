@@ -21,10 +21,10 @@ function updateTheme() {
     if (document.body.classList.contains('dark-theme')) {
         homeSection.style.backgroundImage = "url('images/2.png')";
         profileImage.src = 'images/foto_perfil_negro1.png';
-        document.body.style.background = "linear-gradient(135deg, #082B59, #5E728C)";
+        document.body.style.background = "linear-gradient(135deg, #082759, #5E728C)";
     } else {
         homeSection.style.backgroundImage = "url('images/1.png')";
         profileImage.src = 'images/foto_perfil_blanco1.png';
-        document.body.style.background = "linear-gradient(135deg, #6B6FBF, #D8D9F2)";
+        document.body.style.background = "linear-gradient(200deg, #E9EAF2, #6B6FBF)";
     }
 }
