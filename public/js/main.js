@@ -20,11 +20,13 @@ function updateTheme() {
 
     if (document.body.classList.contains('dark-theme')) {
         homeSection.style.backgroundImage = "url('images/2.png')";
+        homeSection.style.backgroundAttachment = 'fixed'; // Fijar la imagen de fondo
         profileImage.src = 'images/foto_perfil_negro1.png';
-        document.body.style.background = "linear-gradient(135deg, #082759, #5E728C)";
+        document.body.style.background = "#153261";
     } else {
         homeSection.style.backgroundImage = "url('images/1.png')";
+        homeSection.style.backgroundAttachment = 'fixed'; // Fijar la imagen de fondo
         profileImage.src = 'images/foto_perfil_blanco1.png';
-        document.body.style.background = "linear-gradient(200deg, #E9EAF2, #6B6FBF)";
+        document.body.style.background = "#6B6FBF";
     }
 }

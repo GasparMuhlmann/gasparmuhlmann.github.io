@@ -5,7 +5,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     transition: background 0.5s, color 0.5s;
-    background-size: cover;
+    background-size: 100% 100%; /* La imagen se escala para llenar todo el contenedor */
     background-attachment: fixed;
 }
 
@@ -482,11 +482,16 @@ ul li {
     text-align: center;
 }
 
+#projects .contact-title {
+    margin-bottom: 3rem; /* Add margin to separate title from cards */
+    color: #fff; /* Ensuring the title remains white */
+}
+
 .projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .card {
@@ -510,12 +515,11 @@ ul li {
     content: '';
     position: absolute;
     inset: 0;
-    left: -7px;
+    left: -9px;
     margin: auto;
-    width: 295px;
-    height: 375px;
+    width: 301px;
+    height: 380px;
     border-radius: 14px;
-    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
     z-index: -10;
     pointer-events: none;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -526,9 +530,25 @@ ul li {
     z-index: -1;
     position: absolute;
     inset: 0;
-    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
     transform: translate3d(0, 0, 0) scale(0.95);
     filter: blur(20px);
+}
+
+/* Specific color changes for dark and light themes */
+body.dark-theme .card::before {
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+}
+
+body.dark-theme .card::after {
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+}
+
+body.light-theme .card::before {
+    background: linear-gradient(-45deg, #0056b3 0%, #002244 100%);
+}
+
+body.light-theme .card::after {
+    background: linear-gradient(-45deg, #003366 0%, #001122 100%);
 }
 
 .heading {
@@ -542,12 +562,23 @@ ul li {
 }
 
 .card p:last-child {
-    color: #e81cff;
     font-weight: 600;
 }
 
-.card:hover {
+body.dark-theme .card p:last-child {
+    color: #fff; 
+}
+
+body.light-theme .card p:last-child {
+    color: #000; 
+}
+
+body.dark-theme .card:hover {
     border-color: #e81cff;
+}
+
+body.light-theme .card:hover {
+    border-color: #003366;
 }
 
 .card:hover::after {
@@ -565,17 +596,17 @@ ul li {
 }
 
 .contact-section .container {
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
 }
 
-.section-title {
+.contact-title {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
-.section-subtitle {
+.contact-subtitle {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
@@ -601,7 +632,6 @@ ul li {
     margin-bottom: 0.5rem;
     font-weight: bold;
     font-size: 1rem;
-    color: #000;
 }
 
 .contact-form input,
@@ -638,7 +668,13 @@ ul li {
     background-color: #555;
 }
 
+/* Dark Theme Styles */
 body.dark-theme .contact-section {
+    color: #fff;
+}
+
+body.dark-theme .contact-title,
+body.dark-theme .contact-subtitle {
     color: #fff;
 }
 
@@ -669,6 +705,16 @@ body.dark-theme .submit-button {
 
 body.dark-theme .submit-button:hover {
     background-color: #bbb;
+}
+
+/* Light Theme Styles */
+body.light-theme .contact-title,
+body.light-theme .contact-subtitle {
+    color: #fff;
+}
+
+body.light-theme .contact-form label {
+    color: #000;
 }
 
 /* Footer Styles */
